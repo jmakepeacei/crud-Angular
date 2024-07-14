@@ -1,0 +1,34 @@
+<p>editar-empleado works!</p>
+
+<div class="card">
+    <div class="card-header">
+        Editar Empleado
+    </div>
+    <div class="card-body">
+        <form ngNativeValidate [formGroup]="formularioDeEmpleados" (ngSubmit)="enviarDatos()">
+
+            <div class="mb-3">
+              <label for="" class="form-label">Nombre</label>
+              <input required type="text"
+                class="form-control" formControlName="nombre" name="" id="" aria-describedby="helpId" placeholder="Escribe un nombre">              
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Correo</label>
+              <input required type="email"
+                class="form-control" formControlName="correo" name="" id="" aria-describedby="helpId" placeholder="Ingrese un correo">
+              
+            </div>
+
+            <div class="btn-group" role="group" aria-label="Button group name">
+                <button type="submit" class="btn btn-success">Modificar</button>
+                <button type="button" routerLink="/listar-empleado/" class="btn btn-primary">Cancelar</button>
+                
+            </div>
+
+        </form>
+    </div>
+    <div class="card-footer text-muted">
+        Footer
+    </div>
+</div>
